@@ -14,3 +14,9 @@
   apt:
     name: "knot"
     state: "present"
+
+- name: add knot config file 
+  template: src=.j2 dest=/etc/knot/knot.conf
+  
+- name: add zonr file
+  template: src=.j2 dest=/var/lib/knot/{{ domain }}.zone
