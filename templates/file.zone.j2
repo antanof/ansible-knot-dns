@@ -1,12 +1,12 @@
 $ORIGIN {{ domain }}.
 $TTL 3600
 @ 10800 IN SOA {{ dns }}.{{ domain }}. {{ postmaster_mail }} (
-               {{  }} ; Numero
-               {{  }} ; Refresh
-               {{  }} ; Retry
-               {{  }} ; Expire
-               {{  }} ; Minimum
-               
+               {{ serial }} ; Numero
+               {{ refresh }} ; Refresh
+               {{ retry }} ; Retry
+               {{ expire }} ; Expire
+               {{ minimum }} ; Minimum
+
         IN NS {{ dns }}.{{ domain }}.
 ; Basic ipv4/ipv6 records
 @       IN A {{ ip1 }}
